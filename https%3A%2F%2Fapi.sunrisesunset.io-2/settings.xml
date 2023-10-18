@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:RestService" id="b24eff7d-e694-49ac-b40c-da059da01014" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.sunrisesunset.io 2" type="rest">
+  <con:settings id="bf63d118-980f-4f2d-b813-1af5066ef385">
+    <con:setting id="dc9172ee-1d73-4383-b1f2-9e80210a859ffileName">https%3A%2F%2Fapi.sunrisesunset.io</con:setting>
+    <con:setting id="b24eff7d-e694-49ac-b40c-da059da01014fileName">https%3A%2F%2Fapi.sunrisesunset.io-2</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://api.sunrisesunset.io</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="e2f56d49-1fee-4eca-8ff9-d44226066985">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

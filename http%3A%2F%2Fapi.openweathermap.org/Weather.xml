@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Weather" path="/data/2.5/weather" id="38f67e09-eead-43bf-bd35-436b4350ff0e">
+  <con:settings id="6403a81e-1179-4687-9a4f-06427c3e235a">
+    <con:setting id="38f67e09-eead-43bf-bd35-436b4350ff0efileName">Weather</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Weather" id="9b9adcc2-1175-452d-ad25-9c82d68e4720" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>q</con:name>
+        <con:value>Boston</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Boston</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>appid</con:name>
+        <con:value>85c705dd76051cb3d8e5540b300279d4</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>85c705dd76051cb3d8e5540b300279d4</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>units</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:weat="http://api.openweathermap.org/data/2.5/weather">weat:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="3a506aa2-76a0-4676-9056-8d082d74e7c2" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://api.openweathermap.org</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="q" value="Boston"/>
+        <con:entry key="units" value="imperial"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>q</con:entry>
+        <con:entry>appid</con:entry>
+        <con:entry>units</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

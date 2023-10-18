@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Json" path="/json" id="201a7c88-2619-4902-bb14-3f254ae6d233">
+  <con:settings id="37875e64-ed3c-459c-9f3c-a0c8842319db">
+    <con:setting id="2fc7b624-ce45-40f9-ae5d-3a64e1586403fileName">Json</con:setting>
+    <con:setting id="201a7c88-2619-4902-bb14-3f254ae6d233fileName">Json</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Json" id="f1fd0234-d413-4856-b949-d3fc500bf2c9" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>lat</con:name>
+        <con:value>42.3584</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>42.3584</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>lng</con:name>
+        <con:value>-71.0598</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>-71.0598</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>timezone</con:name>
+        <con:value>EST</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>EST</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>date</con:name>
+        <con:value>today</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>today</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:json="https://api.sunrisesunset.io/json">json:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="09de5bba-aa87-4ff3-93ac-c420005224c8" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.sunrisesunset.io</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.sunrisesunset.io/json</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="date" value="today"/>
+        <con:entry key="lng" value="-71.0598"/>
+        <con:entry key="timezone" value="EST"/>
+        <con:entry key="lat" value="42.3584"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>lat</con:entry>
+        <con:entry>lng</con:entry>
+        <con:entry>timezone</con:entry>
+        <con:entry>date</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="e2f56d49-1fee-4eca-8ff9-d44226066985">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="e2f56d49-1fee-4eca-8ff9-d44226066985">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="e2f56d49-1fee-4eca-8ff9-d44226066985">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>
